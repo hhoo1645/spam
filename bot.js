@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.content === '-ريب'){
-        message.channel.send('#rep @XNefoo|Huler#8444')
+        message.channel.send('#rep @XNefoo|Huler#8444 ')
     }
 });
 
@@ -47,7 +47,7 @@ client2.on('message', message => {
 
 client2.on('message', message => {
     if(message.content === '-ريب'){
-        message.channel.send('#rep @XNefoo|Huler#8444')
+        message.channel.send('#rep @XNefoo|Huler#8444 ')
     }
 });
 
