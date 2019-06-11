@@ -76,8 +76,8 @@ message.channel.send(`${args}`); // محطوط # عشان محد يستخدم ا
 }
 });
 
-client.on('message',function(message) {
-    let prefix = "!";
+client2.on('message',function(message) {
+    let prefix = "-";
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
 if(!args) return;
