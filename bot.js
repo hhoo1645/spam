@@ -99,3 +99,8 @@ if(!args) return;
 message.channel.send(`${args}`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
 }
 });
+
+
+
+client.login(process.env.TOKEN);
+client2.login(process.env.TOKEN2);
