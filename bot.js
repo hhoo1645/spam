@@ -67,50 +67,14 @@ if (message.content === '!spam') {
       }
 });
 
-client.on('message', message => {
-
-  if (message.author.bot) return; // Alpha Codes Ghost
-
-  if (!message.content.startsWith(prefix)) return;
-
-
-  let command = message.content.split(" ")[0];
-
-  command = command.slice(prefix.length);
-
-
-  let args = message.content.split(" ").slice(1);
-
-
-// -say
-
- if (command === "say") { // Alpha Codes Ghost
-  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.sendMessage("**You Donot HavePermission ADMINISTRATOR**").then(m => m.delete(5000));
-          message.delete()
-
-    message.channel.sendMessage(args.join(" ")).catch(console.error);
-
-  }
-
-  
- // Alpha Codes Ghost
- 
-
-
-if (command == "say") {
-  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.sendMessage("**You Donot HavePermission ADMINISTRATOR**").then(m => m.delete(5000));
-    let say = new Discord.RichEmbed()
-
-    .setDescription(args.join(" "))
-
-    .setColor(0x23b2d6) // Alpha Codes Ghost
-
-    message.channel.sendEmbed(say);
-
-    message.delete();
-
-  }
-
+client.on('message',function(message) {
+    let prefix = "!";
+let args = message.content.split(" ").slice(1).join(" ");
+if(message.content.startsWith(prefix + "say")) {
+if(!args) return;
+message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
+}
+});
 
 
 
